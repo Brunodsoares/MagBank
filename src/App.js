@@ -4,7 +4,7 @@ import Header from './components/Headers';
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Header text="magbank é incrivel!" color="#f00" />
     </div>
   );
 }
