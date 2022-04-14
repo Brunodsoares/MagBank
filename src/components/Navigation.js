@@ -1,13 +1,28 @@
-import React from 'react'; 
-//foi feito importação de cada elemento que veio do bootstrap 
-import { Navbar, Nav, Container, ButtonGroup, Button, NavDropdown } from "react-bootstrap"; 
+import React from "react";
+//foi feito importação de cada elemento que veio do bootstrap
+import {
+  Navbar,
+  Nav,
+  Container,
+  ButtonGroup,
+  Button,
+  NavDropdown,
+} from "react-bootstrap";
 import "./Navigation.scss";
+import logo from "../assets/logo.svg";
 
 const Navigation = () => (
   //codigo importado do reac-bootstrap
-  <Navbar bg="light" expand="lg">
+  <Navbar variant="dark" expand="lg">
     <Container>
-      <Navbar.Brand href="#home">MAGBANK</Navbar.Brand>
+      <Navbar.Brand href="#home">
+        <img
+          src={logo}
+          height="30"
+          className="d-inline-block align-top"
+          alt="Magbank logo"
+        />
+      </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">
@@ -16,7 +31,7 @@ const Navigation = () => (
           <Nav.Link href="#faq">FAQ</Nav.Link>
         </Nav>
         <ButtonGroup aria-label="Basic example">
-          <Button variant="outline-secondary">
+          <Button variant="outline-light">
             <NavDropdown title="Acessar minha conta" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
@@ -29,7 +44,7 @@ const Navigation = () => (
               </NavDropdown.Item>
             </NavDropdown>
           </Button>
-          <Button variant="outline-secondary">Abra sua conta</Button>
+          <Button variant="outline-light">Abra sua conta</Button>
         </ButtonGroup>
       </Navbar.Collapse>
     </Container>
@@ -37,4 +52,3 @@ const Navigation = () => (
 );
 
 export default Navigation;
-
