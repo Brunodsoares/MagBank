@@ -9,7 +9,7 @@ import {
   NavDropdown,
 } from "react-bootstrap";
 import "./Navigation.scss";
-import logo from "../assets/logo.svg";
+import logo from "../assets/logo-nav.svg";
 
 const Navigation = () => (
   //codigo importado do reac-bootstrap
