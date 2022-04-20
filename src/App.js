@@ -15,7 +15,7 @@ const App = () => (
 
     <InfoCards />
     <CardsList posts={posts} />
-    <CenterButton children='abra sua conta' />
+    <CenterButton children='Abra sua conta' />
   </div>
 );
 
