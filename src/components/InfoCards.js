@@ -10,12 +10,14 @@ import {
 import magcard from "../assets/magnetic-card.png";
 import "./InfoCards.scss";
 
+
+
 const InfoCards = () => (
   <Container className="my-5">
     <Row>
       <Col xs={12} lg={7} className="mb-5 mb-lg-0 px-5 px-lg-0">
         <Row>
-          <h2 className="display-4 my-5">Cartão de Crédito</h2>
+          <h2 className=" my-5 text-credit">Cartão de Crédito</h2>
         </Row>
         <Row>
           <Col xs={12} lg={6} className="mb-4">

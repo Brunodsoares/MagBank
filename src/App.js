@@ -4,6 +4,8 @@ import Hero from "./components/Hero"
 import InfoCards from "./components/InfoCards";
 import CardsList from "./components/CardsList";
 import CenterButton from "./components/CenterButton";
+
+
 import "./App.scss";
 
 import posts from './data/post';
@@ -15,7 +17,7 @@ const App = () => (
 
     <InfoCards />
     <CardsList posts={posts} />
-    <CenterButton children='abra sua conta' />
+    <CenterButton children='Abra sua conta' />
   </div>
 );
 
