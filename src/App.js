@@ -20,6 +20,7 @@ const App = () => (
     <CardsList posts={posts} />
     <CenterButton children='Abra sua conta' />
     <Institutional />
+
   </div>
 );
 
