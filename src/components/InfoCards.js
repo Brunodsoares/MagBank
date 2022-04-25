@@ -1,15 +1,14 @@
 import React from "react";
 import { Row, Col, Image, Container } from "react-bootstrap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCreditCard,
-  faMobileButton,
-  faCartShopping,
   faWallet,
+  faMobile,
+  faShoppingCart,
 } from "@fortawesome/free-solid-svg-icons";
 import magcard from "../assets/magnetic-card.png";
 import "./InfoCards.scss";
-
+import Listicon from "./Listicon.js";
 
 
 const InfoCards = () => (
@@ -21,60 +20,24 @@ const InfoCards = () => (
         </Row>
         <Row>
           <Col xs={12} lg={6} className="mb-4">
-            <Row>
-              <Col xs={2} className="d-flex justify-content-center">
-                <FontAwesomeIcon
-                  size="2x"
-                  color="#F05656"
-                  icon={faCreditCard}
-                />
-              </Col>
-              <Col xs={10} className={"h5 text-muted"}>
-                Credito Pessoal
-              </Col>
-            </Row>
+            <Listicon icon={faCreditCard} size={2} color={'#f05656'} textclassName='h5 text-muted'>
+              Crédito Pessoal
+            </Listicon>
           </Col>
           <Col xs={12} lg={6} className="mb-4">
-            <Row>
-              <Col xs={2} className="d-flex justify-content-center">
-                <FontAwesomeIcon
-                  size="2x"
-                  color="#F05656"
-                  icon={faMobileButton}
-                />
-              </Col>
-              <Col xs={10} className={"h5 text-muted"}>
-                App
-              </Col>
-            </Row>
+          <Listicon icon={faShoppingCart} size={2} color={'#f05656'} textclassName='h5 text-muted'>
+              Pagamento Online
+            </Listicon>
           </Col>
           <Col xs={12} lg={6} className="mb-4">
-            <Row>
-              <Col xs={2} className="d-flex justify-content-center">
-                <FontAwesomeIcon
-                  size="2x"
-                  color="#F05656"
-                  icon={faCartShopping}
-                />
-              </Col>
-              <Col xs={10} className={"h5 text-muted"}>
-                Pagamento Online
-              </Col>
-            </Row>
+          <Listicon icon={faMobile} size={2} color={'#f05656'} textclassName='h5 text-muted'>
+              APP
+            </Listicon>
           </Col>
           <Col xs={12} lg={6} className="mb-4">
-            <Row>
-              <Col xs={2} className="d-flex justify-content-center">
-                <FontAwesomeIcon
-                  size="2x"
-                  color="#F05656"
-                  icon={faWallet}
-                />
-              </Col>
-              <Col xs={10} className={"h5 text-muted"}>
-                Carteira Digital
-              </Col>
-            </Row>
+          <Listicon icon={faWallet} size={2} color={'#f05656'} textclassName='h5 text-muted'>
+              Carteira Digital
+            </Listicon>
           </Col>
         </Row>
       </Col>

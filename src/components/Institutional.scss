@@ -4,3 +4,11 @@
     background-position: center;
 }
 
+.title__inst{
+    font-size: 2.2rem;
+    font-weight: 300;   
+    line-height: 1.2rem;
+    @media screen and (min-width: 902px) {
+        font-size: 3.5rem;
+    }
+}
