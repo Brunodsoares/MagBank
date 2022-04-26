@@ -20,22 +20,22 @@ const InfoCards = () => (
         </Row>
         <Row>
           <Col xs={12} lg={6} className="mb-4">
-            <Listicon icon={faCreditCard} size={2} color={'#f05656'} textclassName='h5 text-muted'>
+            <Listicon icon={faCreditCard} size={2} color={'#f05656'} textClassName='h5 text-muted'>
               Crédito Pessoal
             </Listicon>
           </Col>
           <Col xs={12} lg={6} className="mb-4">
-          <Listicon icon={faShoppingCart} size={2} color={'#f05656'} textclassName='h5 text-muted'>
+          <Listicon icon={faShoppingCart} size={2} color={'#f05656'} textClassName='h5 text-muted'>
               Pagamento Online
             </Listicon>
           </Col>
           <Col xs={12} lg={6} className="mb-4">
-          <Listicon icon={faMobile} size={2} color={'#f05656'} textclassName='h5 text-muted'>
+          <Listicon icon={faMobile} size={2} color={'#f05656'} textClassName='h5 text-muted'>
               APP
             </Listicon>
           </Col>
           <Col xs={12} lg={6} className="mb-4">
-          <Listicon icon={faWallet} size={2} color={'#f05656'} textclassName='h5 text-muted'>
+          <Listicon icon={faWallet} size={2} color={'#f05656'} textClassName='h5 text-muted'>
               Carteira Digital
             </Listicon>
           </Col>
