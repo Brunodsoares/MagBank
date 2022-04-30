@@ -9,6 +9,7 @@ import Faq from "./components/Faq";
 import "./App.scss";
 
 import posts from './data/post';
+import Footer from "./components/Footer";
 
 
 const App = () => (
@@ -22,7 +23,7 @@ const App = () => (
     
     <Institutional />
     <Faq />
-
+    <Footer/>
   </div>
 );
 

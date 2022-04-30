@@ -9,8 +9,9 @@ const Listicon = ({
     textClassName = '',
     className = '',
     children,
+    onclick,
 }) => (
-    <Row className={`d-flex align-items-center ${className}`}>
+    <Row className={`d-flex align-items-center ${className}`} onclick={onclick} >
         <Col xs={size} className="d-flex justify-content-center">
             <FontAwesomeIcon icon={icon} size={`${size}x`} color={color} />
         </Col>
