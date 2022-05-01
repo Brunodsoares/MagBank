@@ -11,7 +11,7 @@ import {
 import "./Navigation.scss";
 import logo from "../assets/logo-nav.svg";
 
-const Navigation = () => (
+const Navigation = ({ handleCreateAcc }) => (
   //codigo importado do reac-bootstrap
   <Navbar variant="dark" expand="lg">
     <Container>
@@ -44,7 +44,9 @@ const Navigation = () => (
               </NavDropdown.Item>
             </NavDropdown>
           </Button>
-          <Button variant="outline-light">Abra sua conta</Button>
+          <Button variant="outline-light" onClick={handleCreateAcc}>
+            Abra sua conta
+          </Button>
         </ButtonGroup>
       </Navbar.Collapse>
     </Container>
