@@ -21,6 +21,7 @@ const Faq = () => {
   const [index, setIndex] = useState(0); 
   
   const handleClick = (key) => {
+    console.log('click')
     setIndex(key);
   };
 
@@ -55,7 +56,7 @@ const Faq = () => {
                 className={"faq-clickable mb-3"}
                 textClassName="lead"
                 color={key === index ? "#FFF" : "#BBB"}
-                onClick={() => handleClick(key)}
+                onclick={() => handleClick(key)}
                 key={key}
               >
                 {text}

@@ -1,6 +1,5 @@
 import React from "react";
 import { Card, Button, Container, Row, Col } from "react-bootstrap";
-import "./CardsList.scss";
 
 const CardsList = ({ posts }) => (
   <Container className='my-lg-5'>

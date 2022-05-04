@@ -13,13 +13,13 @@ const Footer = () => (
   <footer className="footer">
     <Container>
       <Row className="text-center py-5">
-        <Col xs={12} lg={6} className="text-lg-left">
+        <Col xs={12} lg={6} className="text-lg-left  mb-3">
           <Image src={logo} />
         </Col>
 
-        <Col xs={12} lg={4} className="py-xs-5">
+        <Col xs={12} lg={4} className="py-xs-5 mb-3">
           <Image src={applestore} />
-          <Image src={playstore} className="m-2" />
+          <Image src={playstore} className="ml-2" />
         </Col>
 
         <Col
