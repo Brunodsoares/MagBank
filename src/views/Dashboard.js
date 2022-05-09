@@ -1,11 +1,19 @@
 import React from "react";
-import {Button, Col, Container, Row} from "react-bootstrap";
+import {Button, Col, Container, Row, Tab, Tabs, Table} from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faCircle } from "@fortawesome/free-solid-svg-icons";
 
 import "./Dashboard.scss"
 
-const Dashboard = () => (
+const Dashboard = () => {
+    const data = [
+        { date: '22/07', description: 'SAQUE 24h 12345', value: '300,00' },
+        { date: '25/07', description: 'SUPERMERCADO 6151321', value: '275,00' },
+        { date: '25/07', description: 'NETFLIX 12656', value: '30,00' },
+        { date: '26/07', description: 'FARMACIA 12345', value: '350,00' },
+    ];
+
+    return (
   <Container className="dashboard py-5">
     <Row>
       <Col xs={12} lg={4}>
@@ -60,10 +68,83 @@ const Dashboard = () => (
         <p className="mb-4">5.000,00</p>
         <Button variant="secondary">Ver extrato</Button>
       </Col>
-      <Col xs={12} lg={5}></Col>
+      <Col xs={12} lg={5} className="my-5">
+        <Tabs
+          className="mt-5 pt-5 mb-3"
+          defaultActiveKey="latest"
+          id="uncontrolled-tab-example"
+        >
+          <Tab eventKey="latest" title="Últimos lançamentos">
+            <Table striped bordered hover>
+              <thead>
+                <tr>
+                  <th>Data</th>
+                  <th>Descrição</th>
+                  <th>Valor(R$)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>22/07</td>
+                  <td>SAQUE 24H 01245</td>
+                  <td>300,00</td>
+                </tr>
+                <tr>
+                  <td>22/07</td>
+                  <td>SUPERMERCADO 2312332</td>
+                  <td>275.90</td>
+                </tr>
+                <tr>
+                  <td>21/07</td>
+                  <td>ESTACIONAMENTO 123234</td>
+                  <td>12,00</td>
+                </tr>
+                <tr>
+                  <td>21/07</td>
+                  <td>PAGAMENTO ALUGUEL 123234</td>
+                  <td>12,00</td>
+                </tr>
+              </tbody>
+            </Table>
+          </Tab>
+          <Tab eventKey="future" title="Lançamentos futuros">
+            <Table striped bordered hover>
+              <thead>
+                <tr>
+                  <th>Data</th>
+                  <th>Descrição</th>
+                  <th>Valor(R$)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>22/07</td>
+                  <td>SAQUE 24H 01245</td>
+                  <td>300,00</td>
+                </tr>
+                <tr>
+                  <td>22/07</td>
+                  <td>SUPERMERCADO 2312332</td>
+                  <td>275.90</td>
+                </tr>
+                <tr>
+                  <td>21/07</td>
+                  <td>ESTACIONAMENTO 123234</td>
+                  <td>12,00</td>
+                </tr>
+                <tr>
+                  <td>21/07</td>
+                  <td>PAGAMENTO ALUGUEL 123234</td>
+                  <td>12,00</td>
+                </tr>
+              </tbody>
+            </Table>
+          </Tab>
+        </Tabs>
+      </Col>
     </Row>
   </Container>
-);
+)};
 
 export default Dashboard;
 
