@@ -1,12 +1,12 @@
 @import "../variables";
 
 .dashboard {
-    width: 100vw;
-    height: calc(100vh - 22.5rem);
+    // width: 100vw;
+    // height: calc(100vh - 22.5rem);
 
-    @media screen and (min-width: 992px) {
-        height: calc(100vh - 16.25rem);
-    }
+    // @media screen and (min-width: 992px) {
+    //     height: calc(100vh - 16.25rem);
+    // }
 
     &__user-avatar {
         position: relative;

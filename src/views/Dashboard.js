@@ -32,33 +32,34 @@ const Dashboard = () => (
           </Col>
         </Row>
         <div className="d-grid gap-2">
-          <Button
-            className="dashboard__button"
-            variant="link"
-            size="lg"
-            block
-          >
+          <Button className="dashboard__button" variant="link" size="lg" block>
             Minha conta
           </Button>
-          <Button
-            className="dashboard__button"
-            variant="link"
-            size="lg"
-            block
-          >
+          <Button className="dashboard__button" variant="link" size="lg" block>
             Pagamento
           </Button>
-          <Button
-            className="dashboard__button"
-            variant="link"
-            size="lg"
-            block
-          >
+          <Button className="dashboard__button" variant="link" size="lg" block>
             Extrato
           </Button>
         </div>
       </Col>
-      <Col xs={12} lg={3}></Col>
+      <Col xs={12} lg={3} className="mt-lg-5 pt-lg-4">
+        <h3 className="my-5">
+          <strong>Conta Corrente</strong>
+        </h3>
+        <h6>
+          <strong>Saldo em conta corrente</strong>
+        </h6>
+        <h4 className="text-success mb-4">
+          <small>R$</small> 3.500<small>,00</small>
+        </h4>
+        <h6>
+          <strong>Cheque especial</strong>
+        </h6>
+        <p className="mb-0">Limite disponivel</p>
+        <p className="mb-4">5.000,00</p>
+        <Button variant="secondary">Ver extrato</Button>
+      </Col>
       <Col xs={12} lg={5}></Col>
     </Row>
   </Container>
