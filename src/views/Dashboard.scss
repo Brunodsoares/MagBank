@@ -19,14 +19,30 @@
     }
 
     &__button {
-        text-align: left;
         color: $color-primary;
         text-decoration: none;
+        margin-bottom: 0.5rem;
 
-        &:hover, &:active {
-            background-color: $color-primary;
-            color: #FFF;
+        &:hover,
+        &:focus,
+        &--active,
+        &--active:hover {
             text-decoration: none;
+        }
+
+        &:hover,
+        &--active,
+        &--active:hover {
+            color: #fff;
+        }
+
+        &:hover {
+            background-color: $color-muted;
+        }
+
+        &--active,
+        &--active:hover {
+            background-color: $color-primary;
         }
     }
 }
@@ -37,4 +53,11 @@
 
 .nav-link:active {
     color: $color-muted;
+}
+
+a.dashboard__link,
+a.dashboard__link:active,
+a.dashboard__link:focus,
+a.dashboard__link:hover {
+    text-decoration: none;
 }
