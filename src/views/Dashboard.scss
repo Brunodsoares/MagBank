@@ -1,8 +1,6 @@
 @import "../variables";
 
 .dashboard {
-    // width: 100vw;
-    // height: calc(100vh - 22.5rem);
      @media screen and (min-width: 992px) {
         height: calc(100vh - 16.25rem);
      }

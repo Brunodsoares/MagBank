@@ -5,10 +5,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faCircle } from "@fortawesome/free-solid-svg-icons";
 
 import AccountBalance from "../components/AccountBalance";
+import AccountPayments from "../components/Accountpayments";
+import AccountHistory from "../components/AccountHistory";
 
 import "./Dashboard.scss";
 
-const Dashboard = () => {
+const Dashboard = ({ className = false }) => {
   const [activeLink, setActiveLink] = useState(0);
 
 
@@ -32,10 +34,18 @@ const Dashboard = () => {
       { date: "26/08", description: "FARMACIA (2/2) 12345", value: "350,00" },
       { date: "30/08", description: "IMAGINESCHOOL 983264", value: "180,00" },
     ],
+    history: [
+      { data: "22/08", description: "MERCADO", value: "400,00" },
+      { data: "22/08", description: "CONVENIO  137822345", value: "500,00" },
+      { data: "25/08", description: "TELEFONE 6151321", value: "150,00" },
+      { data: "25/08", description: "NETFLIX 12656", value: "30,00" },
+      { data: "26/08", description: "FARMACIA (2/2) 12345", value: "350,00" },
+      { data: "30/08", description: "IMAGINESCHOOL 983264", value: "180,00" },
+    ],
   };
 
   return (
-    <Container className="dashboard py-5">
+    <Container className={`dashboard py-5 ${className ? className : ""}`}>
       <Row>
         <Col xs={12} lg={4}>
           <Row className="aling-items-center mb-5">
@@ -62,55 +72,25 @@ const Dashboard = () => {
           </Row>
           <div className="d-grid gap-2">
             {links.map(({ text, path }, key) => (
-              <Link to={path}>
+              <Link className="dashboard__link" to={path} key={key}>
                 <Button
                   className={`dashboard__button ${
-                  key === activeLink ? 'dashboard__button--active' : ''
-                }`}
+                    key === activeLink ? "dashboard__button--active" : ""
+                  }`}
                   variant="link"
                   size="lg"
-                  block
+                  block="true"
                   onClick={() => setActiveLink(key)}
                 >
                   {text}
                 </Button>
               </Link>
             ))}
-            {/* <Link to="/dashboard">
-              <Button
-                className="dashboard__button"
-                variant="link"
-                size="lg"
-                block
-              >
-                Minha conta
-              </Button>
-            </Link>
-            <Link to="/dashboard/payments">
-              <Button
-                className="dashboard__button"
-                variant="link"
-                size="lg"
-                block
-              >
-                Pagamento
-              </Button>
-            </Link>
-            <Link to="/dashboard/history">
-              <Button
-                className="dashboard__button"
-                variant="link"
-                size="lg"
-                block
-              >
-                Extrato
-              </Button>
-            </Link> */}
           </div>
         </Col>
         <Routes>
-          <Route path="history" element={<AccountBalance />} />
-          <Route path="payments" element={<AccountBalance />} />
+          <Route path="history" element={<AccountHistory data={data} />} />
+          <Route path="payments" element={<AccountPayments />} />
           <Route path="/" element={<AccountBalance data={data} />} />
         </Routes>
       </Row>
