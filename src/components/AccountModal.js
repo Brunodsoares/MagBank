@@ -4,7 +4,7 @@ import { Button, Form, Modal } from "react-bootstrap";
 const AccountModal = ({ show, handleClose }) => (
   <Modal show={show} onHide={handleClose}>
     <Modal.Header closeButton>
-      <Modal.Title>Abra sus conta</Modal.Title>
+      <Modal.Title>Abra sua conta</Modal.Title>
     </Modal.Header>
     <Modal.Body>
       <Form>
