@@ -26,7 +26,7 @@ const Login = () => (
             </Form.Group>
             <Link to="/dashboard">
             <Button className="mt-3" variant="success" type="submit">
-              Criar Conta
+              Entrar
             </Button>
             </Link>
           </Form>
